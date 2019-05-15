@@ -4,6 +4,9 @@ body {
 #content {
   margin: auto;
 }
-.devoured {
-  float: right;
+img {
+  height: 200px;
+}
+.devour {
+  float: left;
 }

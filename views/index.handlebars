@@ -1,16 +1,36 @@
 <div class="container text-center">
     <div class="row">
         <div id="content" class="col-12 col-md-7 col-lg-6">
+            <img src="/assets/img/burger.png">
             <h1>Eat-Da-Burger!</h1>
             <br>
             <div id="burgers">
-                {{#each burger}}
-                {{#if devoured}}
-                <span>{{burger_name}}</span><button class="btn btn-secondary">Devour It!</button>
-                {{else}}
-                <span class="devoured">{{burger_name}}</span>
-                {{/if}}
-                {{/each}}
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Available</th>
+                            <th scope="col"></th>
+                            <th scope="col">Eaten</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each burger}}
+                        {{#if devoured}}
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>{{burger_name}}</td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                            <td>{{burger_name}}</td>
+                            <td><button class="btn btn-outline-danger btn-sm devour">Devour It!</button></td>
+                            <td></td>
+                        </tr>
+                        {{/if}}
+                        {{/each}}
+                    </tbody>
+                </table>
             </div>
             <br>
             <form action="">
