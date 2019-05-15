@@ -1,18 +1,25 @@
-<h1>Eat-Da-Burger!</h1>
-<div id="burgers">
-    {{#each burger}}
-    {{#if devoured}}
-    <span>{{burger_name}}</span><button class="btn btn-secondary">Devour It!</button>
-    {{else}}
-    <span class="devoured">{{burger_name}}</span>
-    {{/if}}
-    {{/each}}
-</div>
-
-<form action="">
-    <h4>Add a Burger</h4>
-    <div class="form-group">
-        <input class="form-control" type="text" name="burger_name" id="burger_name">
+<div class="container text-center">
+    <div class="row">
+        <div id="content" class="col-12 col-md-7 col-lg-6">
+            <h1>Eat-Da-Burger!</h1>
+            <br>
+            <div id="burgers">
+                {{#each burger}}
+                {{#if devoured}}
+                <span>{{burger_name}}</span><button class="btn btn-secondary">Devour It!</button>
+                {{else}}
+                <span class="devoured">{{burger_name}}</span>
+                {{/if}}
+                {{/each}}
+            </div>
+            <br>
+            <form action="">
+                <h4>Add a Burger</h4>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="burger_name" id="burger_name">
+                </div>
+                <input class="btn btn-primary" type="submit" id="submit" value="Add Burger">
+            </form>
+        </div>
     </div>
-    <input class="btn btn-primary" type="submit" value="Add Burger">
-</form>
+</div>
