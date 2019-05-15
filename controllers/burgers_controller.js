@@ -1,7 +1,9 @@
 var burger = require("../models/burger");
 
-var router = app => {
-  app.get("/", (req, res) => {});
+module.exports = app => {
+  app.get("/", (req, res) => {
+    res.render("index", { burgers: burger.getAll() });
+  });
   app.get("/api/burger", (req, res) => {
     res.json(burger.getAll());
   });
@@ -21,5 +23,3 @@ var router = app => {
     res.json(burger.update(data));
   });
 };
-
-module.exports = router(app);
