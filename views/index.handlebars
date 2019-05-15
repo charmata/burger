@@ -1,0 +1,18 @@
+<h1>Eat-Da-Burger!</h1>
+<div id="burgers">
+    {{#each burger}}
+    {{#if devoured}}
+    <span>{{burger_name}}</span><button class="btn btn-secondary">Devour It!</button>
+    {{else}}
+    <span class="devoured">{{burger_name}}</span>
+    {{/if}}
+    {{/each}}
+</div>
+
+<form action="">
+    <h4>Add a Burger</h4>
+    <div class="form-group">
+        <input class="form-control" type="text" name="burger_name" id="burger_name">
+    </div>
+    <input class="btn btn-primary" type="submit" value="Add Burger">
+</form>
