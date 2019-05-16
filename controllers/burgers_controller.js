@@ -12,21 +12,12 @@ module.exports = app => {
     });
   });
   app.post("/api/burger", (req, res) => {
-    var data = {
-      burger_name: req.body.burger_name,
-      devoured: req.body.devoured
-    };
-    burger.add(data, result => {
+    burger.add(req.body, result => {
       res.json(result);
     });
   });
   app.put("/api/burger/:id", (req, res) => {
-    var data = {
-      id: req.params.id,
-      burger_name: req.body.burger_name,
-      devoured: req.body.devoured
-    };
-    burger.update(data, result => {
+    burger.update(req.body, result => {
       res.json(result);
     });
   });
