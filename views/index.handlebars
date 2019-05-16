@@ -16,13 +16,13 @@
                     <tbody>
                         {{#each burger}}
                         {{#if devoured}}
-                        <tr>
+                        <tr data-id={{id}}>
                             <td></td>
                             <td></td>
                             <td>{{burger_name}}</td>
                         </tr>
                         {{else}}
-                        <tr>
+                        <tr data-id={{id}}>
                             <td>{{burger_name}}</td>
                             <td><button class="btn btn-outline-danger btn-sm devour">Devour It!</button></td>
                             <td></td>
